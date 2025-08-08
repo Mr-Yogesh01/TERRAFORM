@@ -1,0 +1,36 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform
+.terraform.lock.hcl
+
+# Local .terraform directories
+**/.terraform/*
+**/.terraform/**
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Ignore any large binary files
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin

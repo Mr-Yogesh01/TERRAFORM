@@ -102,15 +102,12 @@ resource "aws_instance" "server" {
     timeout     = "2m"
   }
 
-  provisioner "file" {
-    source      = "file10"
-    destination = "/home/ubuntu/file10"
-  }
+  
 
   provisioner "remote-exec" {  #server inside 
     inline = [
       "touch /home/ubuntu/file200",
-      "echo 'hello from devops' >> /home/ubuntu/file200"
+      "echo 'hello from multicloud' >> /home/ubuntu/file200"
     ]
   }
    provisioner "local-exec" {  # where terraform is runnig inside the directory 

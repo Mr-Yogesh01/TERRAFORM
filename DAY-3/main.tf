@@ -18,6 +18,6 @@ resource "aws_instance" "my_ec2" {
   ami                    = "ami-0b09ffb6d8b58ca91"
   instance_type          = "t2.micro"
   #subnet_id              = aws_subnet.my_subnet.id
-  key_name               = "project"
+  key_name               = "yogi"
 }
 

@@ -1,13 +1,10 @@
-name: Terraform CI/CD
+name: Terraform Destroy
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:   # 👈 allows manual trigger (useful for destroy)
+  workflow_dispatch:   # 👈 Run manually from GitHub Actions tab
 
 jobs:
-  terraform:
+  destroy:
     runs-on: ubuntu-latest
 
     defaults:
@@ -33,13 +30,5 @@ jobs:
       - name: Terraform Init
         run: terraform init -reconfigure
 
-      - name: Terraform Plan
-        run: terraform plan
-
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
-        run: terraform apply -auto-approve
-
       - name: Terraform Destroy
-        if: github.event.inputs.destroy == 'true'
         run: terraform destroy -auto-approve

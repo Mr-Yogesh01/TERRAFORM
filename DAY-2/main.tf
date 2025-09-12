@@ -6,8 +6,8 @@ vpc_id = aws_vpc.name.id
 cidr_block = "10.0.0.0/24"
 }
 resource "aws_instance" "dev" {
-    ami = "ami-0efdf839508ec2995"
-    instance_type = "t2.micro"
+    ami = "ami-0b09ffb6d8b58ca91"
+    instance_type = "t2.medium"
     tags = {
       Name = "ec2test"
     }

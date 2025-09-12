@@ -14,9 +14,9 @@
 
 
 resource "aws_instance" "my_ec2" {
-  ami                    = "ami-0b09ffb6d8b58ca91"
+  ami                    = "ami-0b982602dbb32c5bd"
   instance_type          = "t2.micro"
   #subnet_id              = aws_subnet.my_subnet.id
-  key_name               = "yogi.pem"
+  key_name               = "project"
 }
 
